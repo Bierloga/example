@@ -34,4 +34,4 @@ jobs:
         pytest
     - name: Start app
       run: |
-        ./setup.sh
+        cd /home/actions-runner/example/example/example/static && ./setup.sh
