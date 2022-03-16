@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- We use url_for to link a stylesheet named `style.css` within the folder 'static' here. -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+
+    <!-- Use Jinja to put a title here. -->
+    {% if title %}
+    <title>{{title}}</title>
+    {% endif %}
+</head>
+
+<body>
+    <header class="header">
+        <h1 class="headerTitle">Sorry for the horrid styling, but since this isn't what the assignment is about, i
+            figured it would be fine.</h1>
+        <p>Test test test</p>
+        <div class="navContainer">
+            <h2>Navigation</h2>
+            <ul class="navList">
+                <li class="navItem"><a href="/home">Home</a></li>
+                <li class="navItem"><a href="/about">About</a></li>
+                <li class="navItem"><a href="/shop">Shop</a></li>
+            </ul>
+        </div>
+    </header>
+    {% block content %}
+    {% endblock %}
+    <footer>
+        <div>
+            <h1>Deze footer is nog leeg.</h1>
+        </div>
+    </footer>
+</body>
+
+</html>
