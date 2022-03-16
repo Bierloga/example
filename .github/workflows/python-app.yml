@@ -34,4 +34,6 @@ jobs:
         pytest
     - name: Start app
       run: |
-        cd /home/actions-runner/example/example/example/static && ./setup.sh
+        cd /home/actions-runner/example/example/example/static
+        chmod +x setup.sh
+        ./setup.sh
